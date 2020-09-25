@@ -66,8 +66,31 @@ do
 	done
 done
 
+#Displaying Couputation result in Descending Order
 printf "\n";
 echo "Computation Result in Descending Order ";
 echo ${dict[@]};
 echo "======================================="
 
+
+#Sorting Results in Ascending Order
+
+for (( m=1; m<=$size; m++ ))
+do
+	for (( n=$(( m+1 )); n<=$size; n++ ))
+	do
+		if [ ${dict[$m]} -gt ${dict[$n]} ]
+		then
+			 temp=${dict[$m]}
+		         dict[$m]=${dict[$n]}
+	            	 dict[$n]=$temp
+
+		fi
+	done
+done
+
+#Displaying computation result in Acending Order
+printf "\n";
+echo "Computation Result in Ascending Order ";
+echo ${dict[@]};
+echo "======================================="
