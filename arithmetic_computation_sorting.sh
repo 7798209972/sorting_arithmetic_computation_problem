@@ -30,3 +30,5 @@ result1=$(( a+b*c ));
 #Computing a*b+c
 result2=$(( a*b+c ));
 
+#Computing c+a/b
+result3=`echo $c | awk '{ print $1+$a/$b }'`;
