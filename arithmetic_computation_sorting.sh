@@ -36,3 +36,11 @@ result3=`echo $c | awk '{ print $1+$a/$b }'`;
 #Computing a%b+c
 result4=`echo $c | awk '{ print $a%$b+$1 }'`;
 
+#Stroring results in Dictionary for every Computation
+dict[1]=$result1;
+dict[2]=$result2;
+dict[3]=$result3;
+dict[4]=$result4;
+
+#Displaying Values of Dictionary
+echo ${dict[@]};
