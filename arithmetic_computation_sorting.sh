@@ -44,3 +44,30 @@ dict[4]=$result4;
 
 #Read Values of Dictionary
 echo ${dict[@]};
+
+
+#Sorting results in Descending Order
+
+
+#geting size of dictionary
+size=${#dict[@]};
+
+for (( i=1; i<=$size; i++ ))
+do
+	for (( j=$(( i+1 )); j<=$size; j++ ))
+	do
+		if [ ${dict[$i]} -lt ${dict[$j]} ]
+		then
+			 temp=${dict[$i]}
+		         dict[$i]=${dict[$j]}
+	            	 dict[$j]=$temp
+
+		fi
+	done
+done
+
+printf "\n";
+echo "Computation Result in Descending Order ";
+echo ${dict[@]};
+echo "======================================="
+
