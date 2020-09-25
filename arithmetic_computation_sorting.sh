@@ -24,5 +24,9 @@ read c;
 #Declaring Dictionary
 declare -A dict
 
-#Comoputing a+b*c
+#Computing a+b*c
 result1=$(( a+b*c ));
+
+#Computing a*b+c
+result2=$(( a*b+c ));
+
