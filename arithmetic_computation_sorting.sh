@@ -42,5 +42,5 @@ dict[2]=$result2;
 dict[3]=$result3;
 dict[4]=$result4;
 
-#Displaying Values of Dictionary
+#Read Values of Dictionary
 echo ${dict[@]};
