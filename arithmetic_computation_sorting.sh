@@ -19,3 +19,10 @@ read b;
 
 echo "Enter third value : ";
 read c;
+
+
+#Declaring Dictionary
+declare -A dict
+
+#Comoputing a+b*c
+result1=$(( a+b*c ));
